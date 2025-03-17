@@ -20,7 +20,7 @@ function adicionarNome () {
         return;    
     }
     
-    listaDeNomes.push(nome);
+    listaAmigos.push(nome);
     exibirNomesNaTela();
 
     exibirTextoNaTela("Nome adicionado: " ${nome});
