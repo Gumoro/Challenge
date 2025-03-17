@@ -1,17 +1,12 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 let listaAmigos = [];
 
-function exibirMensagemInicial () {
-    exibirTextoNaTela ("Digite o nome dos seus amigos");
-}
+function adicionarAmigo() {
+    let input = document.querySelector("#amigo");
+    let nome = input.value.trim(); 
 
-exibirMensagemInicial ()
-
-function adicionarNome () {
-    let nome = document.querySelector('input-name').value.trim();
-
-    if (nome == "") {
-        alert ("Digite um nome válido");
+    if (nome === "") {
+        alert("Digite um nome válido");
         return;
     }
 
@@ -22,8 +17,9 @@ function adicionarNome () {
     
     listaAmigos.push(nome);
     exibirNomesNaTela();
+    exibirTextoNaTela(`Nome adicionado:${nome}`);
 
-    exibirTextoNaTela("Nome adicionado: " ${nome});
+    input.value = ""; 
 }
 
 function exibirTextoNaTela(texto) {
@@ -35,4 +31,28 @@ function exibirTextoNaTela(texto) {
     }
 
 }
+function exibirNomesNaTela() {
+    let listaElement = document.getElementById("listaAmigos");
+    listaElement.innerHTML = ""; 
 
+    listaAmigos.forEach((nome) => {
+        let li = document.createElement("li"); 
+        li.textContent = nome; 
+        listaElement.appendChild(li); 
+    });
+}
+
+function sortearAmigo () {
+    if (listaAmigos.length === 0 ){
+        alert ("Adicione pelo menos um nome antes de sortear");
+        return;
+    }
+
+    let indiceSorteado = Math.floor(Math.random() * listaAmigos.length);
+    let amigoSorteado = listaAmigos[indiceSorteado];
+
+    exibirTextoNaTela (`O amigo sorteado é: ${amigoSorteado}`) ; 
+
+    listaAmigos = [];
+    exibirNomesNaTela();
+}

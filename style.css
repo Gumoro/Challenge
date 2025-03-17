@@ -160,3 +160,17 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+#mensagem {
+    color: #05DF05;     
+    font-size: 22px;    
+    font-weight: bold;  
+    margin-top: 20px;   
+    text-align: center; 
+}
+
+.button-container {
+    width: 300px;
+    justify-content: center;
+    margin-top: 30px; /* Aumenta o espaçamento entre mensagem e botão */
+}
