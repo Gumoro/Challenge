@@ -27,3 +27,7 @@ Agora, a mensagem exibida no `<p id="mensagem">` ficou mais destacada:
 3. Veja os nomes adicionados à lista.
 4. Clique no botão "Sortear amigo" para escolher um nome aleatoriamente.
 5. A mensagem exibirá o nome sorteado e limpará a lista para um novo sorteio.
+
+Sinta-se à vontade para testar o projeto ao vivo acessando [este link](https://challenge-grocha.vercel.app/).
+
+Espero que você se divirta usando este sorteador de amigo secreto.
